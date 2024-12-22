@@ -1,38 +1,46 @@
-# **BANKING APPLICATION**
+# **Banking Application**  
 
-**OVERVIEW**
-- To emulate a banking application in python with different features.
+## **Overview**  
+This project simulates a banking application built using Python, providing various banking functionalities.  
 
-**FEATURES**
-- Show customer's information
-- Adding funds to an account
-- Adding beneficiary to an account
-- Listing beneficiaries
-- Add cards (debit or credit) to an account
-- List card linked to an account
-- Transfer funds to a beneficiary
-- View transaction history
-- Update account information
-- Change pin of the cards
- 
-**How to Use:**
-1. **Installation:**
-   - Install Python and mysql-connector-python package is installed.
-   - Set up a MySQL database with the required schema.
-   - Update the MySQL connection details in the code (host, user, password, database) to match your local setup.
+## **Features**  
+- Display account information.  
+- Add funds to a user’s account.  
+- Add beneficiaries to an account.  
+- View the list of beneficiaries linked to an account.  
+- Add debit/credit cards to an account.  
+- List all cards associated with an account.  
+- Transfer funds to beneficiaries.  
+- View transaction history.  
+- Update account details.  
+- Change card PINs.  
 
-2. **Running the Application:**
-   - Navigate to the project directory and run the Main.py file.
-   - Follow the on-screen instructions to interact with the Banking Application.
+## **How to Use**  
 
-3. **Usage:**
-   - Upon running the application, you'll be presented with a menu of options to perform various tasks.
-   - Choose the appropriate option to register, login or exit.
-   - After choosing one of the options, you can interact with other features.
+### 1. **Installation**  
+- Ensure Python is installed on your system.  
+- Install the `mysql-connector-python` package by running:  
+  ```bash  
+  pip install mysql-connector-python  
+  ```  
+- Set up a MySQL database with the required schema.  
+- Update the MySQL connection details in the code (host, user, password, database) to match your local setup.  
 
-4. **Exiting the Application:**
-   - To exit the application, simply select the exit option from the menu.
+### 2. **Running the Application**  
+- Navigate to the project directory and execute the `Main.py` file using:  
+  ```bash  
+  python Main.py  
+  ```  
+- Follow the on-screen prompts to interact with the banking application.  
 
-**Dependencies:**
-- *Python 3.x*
-- *MySQL database*
+### 3. **Usage**  
+- Upon launching the application, you'll be presented with a menu of options.  
+- Select the desired option to register, login, or exit.  
+- Perform other tasks like adding funds, transferring money, viewing transactions, and more through the available options.  
+
+### 4. **Exiting the Application**  
+- To exit, simply choose the exit option from the menu.  
+
+## **Dependencies**  
+- *Python 3.x*  
+- *MySQL database*  

@@ -39,7 +39,7 @@ def show_account_info(user):
     from Options import show_options
     show_options(user)
 
-    if balance == 0:
+    if acc_balance == 0:
         print("Account balance is 0. Make Deposit? (y for yes or another key for no):")
         decision = input().lower()
         if decision == 'yes':
