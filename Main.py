@@ -4,7 +4,7 @@ import Login
 
 def main():
     while True:
-        print("Welcome to NL22PS NetBanking:")
+        print("Welcome to Ash NetBanking:")
         print("1. Register")
         print("2. Login")
         print("3. Exit")
