@@ -1,15 +1,13 @@
 import mysql.connector
-# import pdb
-
 
 # 9. Change Pin
 def change_pin(user):
     from Options import show_options
 
-    card_number = int(input("Enter card number: "))
+    card_number = input("Enter card number: ").replace(" ", "")  # Remove spaces from the card number
 
     try:
-        connection = mysql.connector.connect(host="localhost", user="root", password="root", database="Bank_Sch")
+        connection = mysql.connector.connect(host="localhost", user="root", password="Arshiya@2307", auth_plugin="mysql_native_password", database="Bank_Sch")
         cursor = connection.cursor()
 
         # Check if the card exists in the database
@@ -38,16 +36,13 @@ def change_pin(user):
                 print("Invalid PIN. Please enter only digits.")
                 continue
 
-            # Ensure PIN consists of only digits
-            if not new_pin.isdigit():
-                print("Invalid PIN. Please enter only digits.")
-                continue
+            break  # Exit loop once a valid PIN is entered
 
         # Update the PIN
         query = "UPDATE card SET pin = %s WHERE card_no = %s"
-        data = (new_pin, card_number)
-        cursor.execute(query, data)
-        connection.commit()
+        cursor.execute(query, (new_pin, card_number))
+        connection.commit()  # Ensure commit after update
+
         print("PIN changed successfully.")
 
     except mysql.connector.Error as err:

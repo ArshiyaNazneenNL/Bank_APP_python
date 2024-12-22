@@ -5,7 +5,7 @@ import mysql.connector
 def list_cards(user):
     print("List of Cards:")
     try:
-        connection = mysql.connector.connect(host="localhost", user="root", password="root", database="Bank_Sch")
+        connection = mysql.connector.connect(host="localhost", user="root", password="Arshiya@2307",auth_plugin="mysql_native_password", database="Bank_Sch")
 
         cursor = connection.cursor()
 

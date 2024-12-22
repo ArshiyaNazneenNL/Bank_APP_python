@@ -5,7 +5,7 @@ import mysql.connector
 def view_transactions(user):
 
     try:
-        connection = mysql.connector.connect(host="localhost", user="root", password="root", database="Bank_Sch")
+        connection = mysql.connector.connect(host="localhost", user="root", password="Arshiya@2307", auth_plugin="mysql_native_password",database="Bank_Sch")
         cursor = connection.cursor()
         # SQL query to fetch transaction details along with sender and beneficiary names for a specific user
         query = """
@@ -13,8 +13,8 @@ def view_transactions(user):
             t.idtransaction, 
             u.user_name AS sender_name, 
             b.benf_name, 
-            t.amt, 
-            t.tr_timestampcol
+            t.amount, 
+            t.tr_timestamp
         FROM Transaction t
         INNER JOIN acc_info u ON t.sender_acc_no = u.acc_no
         INNER JOIN Benf b ON t.benf_acc_no = b.benf_acc_no

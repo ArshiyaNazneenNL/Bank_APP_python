@@ -15,7 +15,7 @@ def update_info(user):
             print("Invalid mobile number. Mobile number must be 10 digits starting with 7, 8, or 9.")
 
     try:
-        connection = mysql.connector.connect(host="localhost", user="root", password="root", database="Bank_Sch")
+        connection = mysql.connector.connect(host="localhost", user="root", password="Arshiya@2307",auth_plugin="mysql_native_password", database="Bank_Sch")
         cursor = connection.cursor()
 
         # Update the address and mobile number in the database

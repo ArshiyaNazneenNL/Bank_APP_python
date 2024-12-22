@@ -12,7 +12,7 @@ def add_beneficiary(user):
         benef_ifsc = input("Enter beneficiary IFSC Code: ")
 
         try:
-            connection = mysql.connector.connect(host="localhost", user="root", password="root", database="Bank_Sch")
+            connection = mysql.connector.connect(host="localhost", user="root", password="Arshiya@2307", auth_plugin="mysql_native_password", database="Bank_Sch")
 
             cursor = connection.cursor()
 
@@ -27,13 +27,13 @@ def add_beneficiary(user):
                 continue
 
             # Check if the benef_ifsc exists in the Benf table
-            cursor.execute("SELECT * FROM BankIFSC WHERE IFSC_Code = %s", (benef_ifsc,))
-            if not cursor.fetchone():
-                print("Beneficiary IFSC Code does not exist in the database.")
-                retry = input("Do you want to retry? (yes/no): ").lower()
-                if retry != 'yes':
-                    break
-                continue
+            # cursor.execute("SELECT * FROM BankIFSC WHERE IFSC_Code = %s", (benef_ifsc,))
+            # if not cursor.fetchone():
+            #     print("Beneficiary IFSC Code does not exist in the database.")
+            #     retry = input("Do you want to retry? (yes/no): ").lower()
+            #     if retry != 'yes':
+            #         break
+            #     continue
 
             # Insert the beneficiary into the beneficiaries table
             sql = "INSERT INTO Benf (user_name, benf_name, benf_acc_no, Benf_ifsc) VALUES (%s, %s, %s, %s)"
